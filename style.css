@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#content {
+    background-image: url(./images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.socials {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.socials a {
+    font-size: 34px !important;
+    color: 	#FFD300;
+}
+
+.logo {
+    width: 80%;
+    height: 200px;
+    background-image: url(./images/logo.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-content {
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+    background: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 4.2em;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.welcome span {
+    color: #FFD300;
+}
+
+.cuisine {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cuisine div {
+    width: 30%;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuisine div a {
+    text-decoration: none;
+    font-size: 64px;
+    color: inherit;
+}
+
+.cuisine div:first-child, .cuisine div:last-child {
+    background-color: white;
+    color: black;
+}
+
+.cuisine div:nth-child(2){
+    background-color: #FFD300;
+    color: white;
+}
+
+.dishes {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dishes h1 {
+    color: white;
+    font-size:35px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.underline {
+    width: 20%;
+    height: 0px;
+    border: 2px solid #FFD300;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.dishes > div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dishes > div > div {
+    width: 50%;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 25px;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.nigeria {
+    background-image: linear-gradient(rgba(7, 7, 7, 0.514), rgba(7, 7, 7, 0.678), rgba(8, 8, 8, 0.925)), url(./images/egusi.jpg);
+}
+
+.cameroun {
+    background-image: linear-gradient(rgba(7, 7, 7, 0.514), rgba(7, 7, 7, 0.678), rgba(8, 8, 8, 0.925)), url(./images/seafood.jpeg);
+}
+
+.kenya {
+    background-image: linear-gradient(rgba(7, 7, 7, 0.514), rgba(7, 7, 7, 0.678), rgba(8, 8, 8, 0.925)), url(./images/barbeuc.jpg);
+}
+
+.fufu {
+    background-image: linear-gradient(rgba(7, 7, 7, 0.514), rgba(7, 7, 7, 0.678), rgba(8, 8, 8, 0.925)), url(./images/fufu.jpg);
+}
+
+.booking {
+    background-color: white;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    text-align: center;
+}
+
+.booking a {
+    text-decoration: none;
+    color: white;
+    background-color: #FFD300;
+    padding: 10px 30px;
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.daily-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.daily-menu h1 {
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.menu-header{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.menu-dishes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-dishes > div {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #FFD300;
+}
+
+.menu-dishes > div > img {
+    width: 100%;
+    height: 80%;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFD300;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 10px;
+    height: 20%;
+    border-top: 2px solid #FFD300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
