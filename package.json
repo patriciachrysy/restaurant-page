@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "> This is part of the Restaurant page Project in [The Odin Project's](https://www.theodinproject.com/courses/javascript/lessons/restaurant-page) Javascript Curriculum.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patriciachrysy/restaurant-page.git"
+  },
+  "keywords": [],
+  "author": "Manezeu Patricia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patriciachrysy/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/patriciachrysy/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
