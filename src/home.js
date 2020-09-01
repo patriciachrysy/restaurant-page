@@ -1,61 +1,86 @@
-import TabMenu from './tabMenu';
+import  { loadTitle, loadYellowBar} from './common';
 
 function displayHome() {
-    const myContent = document.querySelector('#content');
 
-    myContent.innerHTML = `
-    <div class="sidebar">
-        ${TabMenu}
-    </div>
-    <div class="main-content">
-        <section class="welcome">
-            <h1> Welcome to <span>The Delish</span>,<br> we bring the best of Africa in your meals.</h1>
-        </section>
+    let mainContent = document.createElement('div')
+    mainContent.className = 'main-content';
 
-        <section class="cuisine">
-            <div>
-                <a href="#"><i class="las la-fish"></i></a>
-                <h2>The best ingredients</h2>
-            </div>
-            <div>
-                <a href="#"><i class="las la-concierge-bell"></i></a>
-                <h2>The best cooks</h2>
-            </div>
-            <div>
-                <a href="#"><i class="las la-cocktail"></i></a>
-                <h2>A breathtaking entviroment</h2>
-            </div>
-        </section>
+    let welcome = document.createElement('section')
+    welcome.className = 'welcome';
+    let title = document.createElement('h1')
+    title.innerHTML = `Welcome to <span>The Delish</span>,<br> we bring the best of Africa in your meals.`;
+    welcome.appendChild(title);
+    mainContent.appendChild(welcome);
 
-        <section class="dishes">
-            <h1>Get the real spicy and original african taste that will make you travel</h1>
-            <div class="underline"></div>
-            <div class="first-row">
-                <div class="nigeria">
-                    <h2>Nigerian spicy soups</h2>
-                </div>
-                <div class="cameroun">
-                    <h2>Camerounian fresh seafood</h2>
-                </div>
-            </div>
-            <div class="second-row">
-                <div class="kenya">
-                    <h2>Kenyan king barbecue</h2>
-                </div>
-                <div class="fufu">
-                    <h2>African Fufu feast</h2>
-                </div>
-            </div>
-        </section>
-        <section class="booking">
-            <h1>Wanna give a try? Book your table today!</h1>
-            <div class="underline"></div>
-            <div class="first-row">
-                <a href="#">Book a table</a>
-            </div>
-        </section>
-    </div>
-    `
+    let cuisine = document.createElement('section')
+    cuisine.className = 'cuisine';
+    let cuisines = [
+        {name: 'The best ingredients', icon: 'fish'},
+        {name: 'The best cooks', icon: 'concierge-bell'},
+        {name: 'A breathtaking entviroment', icon: 'cocktail'}
+    ];
+    cuisines.forEach(element => {
+        let res = loadCuisines(element.name, element.icon);
+        cuisine.appendChild(res);
+    });
+    mainContent.appendChild(cuisine);
+
+    let dishes = document.createElement('section')
+    dishes.className = 'dishes';
+    dishes.appendChild(loadTitle('Get the real spicy and original african taste that will make you travel'));
+    dishes.appendChild(loadYellowBar());
+    let rowOne = document.createElement('div')
+    rowOne.className = 'first-row';
+    rowOne.appendChild(loadDishes('Nigerian spicy soups', 'nigeria'));
+    rowOne.appendChild(loadDishes('Camerounian fresh seafood', 'cameroun'));
+    dishes.appendChild(rowOne);
+    let rowTwo = document.createElement('div')
+    rowTwo.className = 'second-row';
+    rowTwo.appendChild(loadDishes('Kenyan king barbecue', 'kenya'));
+    rowTwo.appendChild(loadDishes('African Fufu feast', 'fufu'));
+    dishes.appendChild(rowTwo);
+    mainContent.appendChild(dishes);
+
+    let book = document.createElement('section')
+    book.className = 'booking';
+    book.appendChild(loadTitle('Wanna give a try? Book your table today!'));
+    book.appendChild(loadYellowBar());
+    let row = document.createElement('div')
+    row.className = 'first-row';
+    let link = document.createElement('a')
+    link.innerHTML = 'Book a table';
+    row.appendChild(link);
+    book.appendChild(row);
+    mainContent.appendChild(book);
+
+    return mainContent;
+
+}
+
+function loadCuisines(text, iconName) {
+    let div = document.createElement('div');
+
+    let link = document.createElement('a');
+    link.href = '#';
+    let icon = document.createElement('i')
+    icon.className = `las la-${iconName}`;
+    link.appendChild(icon);
+    div.appendChild(link);
+
+    let title = document.createElement('h2');
+    title.innerHTML = text;
+    div.appendChild(title);
+
+    return div;
+}
+
+function loadDishes(text, country) {
+    let div = document.createElement('div')
+    div.className = country;
+    let title = document.createElement('h2')
+    title.innerHTML = text;
+    div.appendChild(title);
+    return div;
 }
 
 export default displayHome();

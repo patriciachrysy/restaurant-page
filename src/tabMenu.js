@@ -8,30 +8,30 @@ function loadTabMenu() {
 
     let i=0;
     let tabs = ['home', 'menu', 'contact']
-    while(i<=tabs.length) {
+    while(i<tabs.length) {
       let button = loadMenuButton(tabs[i]);
       sidebar.appendChild(button);
       i += 1;
     }
 
+    let j = 0;
     let social = document.createElement('div');
     social.className = 'socials';
     let socials = ['facebook', 'twitter', 'instagram'];
-    while(i<=socials.length) {
-        let button = loadSocialButton(tabs[i]);
+    while(j<socials.length) {
+        let button = loadSocialButton(socials[j]);
         social.appendChild(button);
-        i += 1;
+        j += 1;
     }
     sidebar.appendChild(social);
-
     return sidebar
 }
 
 function loadMenuButton(name) {
     let button = document.createElement('a');
     button.href = '#';
-    button.className = id;
-    button.innerHTML = name.toUppercase();
+    button.id = name;
+    button.innerHTML = name.toUpperCase();
     return button;
 }
 
