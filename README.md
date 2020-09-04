@@ -5,7 +5,7 @@
 
 ![screenshot](./app_screenshot.png)
 
- View the app live [here]()
+ View the app live [here](https://patriciachrysy.github.io/restaurant-page/)
  
 ## Built With
 
@@ -45,7 +45,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/taiwocoker/JavaScript_Tic-Tac-Toe/issues).
+Feel free to check the [issues page](https://github.com/patriciachrysy/restaurant-page/issues).
 
 ## Show your support
 
